@@ -42,8 +42,22 @@
 
         }
         .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
             width: 100%;
             background-color: rgb(210, 220, 200);
+        }
+        .header h1 {
+            flex: 2;
+            text-align: center;
+            margin: 0;
+        }
+        .Left, .Right {
+            flex: 1;
+            display: flex;
+            align-items: center;
         }
         .footer {
             width: 100%;
@@ -55,7 +69,25 @@
             font-size: 10px;
             font-family: Bahnschrift;
             color: rgb(79, 74, 61);
-
+        }
+        .Logo {
+            height: 105px;
+            width: auto;
+            cursor: pointer;
+            margin-left: 3%;
+        }
+        .Menu {
+            height: 42px;
+            width: auto;
+            cursor: pointer;
+            margin-right: 3%;
+        
+        }
+        .Left {
+            justify-content: flex-start;
+        }
+        .Right {
+            justify-content: flex-end;
         }
         h2 {
             margin-top: 40px;
@@ -68,9 +100,15 @@
 </head>
 <body> 
     <div class="header">
+        <div class="Left">
+        <img src="Logo.svg" alt="Logo" class="Logo">
+        </div>
         <h1>
             <p id="Naslov">Magični vlogič v2.0</p>
         </h1>
+        <div class="Right">
+        <img src="Hamburger.svg" alt="Menu" class="Menu">
+        </div>
     </div>
     <h2>    
         <a href="Slikice.html" target="_blank"> 
