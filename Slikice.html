@@ -8,20 +8,70 @@
             text-align: center;
             color: rgb(45, 69, 184);
             font-family: bahnschrift;
-            font-size: 39px;
+            font-size: 33px;
         }
 
         body {
             background-color: rgb(246, 242, 219);
         }
         .grid img{
-            margin: 5px;
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            border: 3px solid rgb(194, 188, 173);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 8px rgba(35, 34, 32, 0.8);
+    
         }
         .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        .lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox img {
+            max-width: 30vw;
+            max-height: 80vh;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .lightbox.open img {
+            transform: scale(1);
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            font-size: 20px;
+            line-height: 1;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -31,24 +81,57 @@
     </h1>
     <h2>    
         <div class="grid">
-            <img src="Anice/1.jpg" alt="Image 1" width="300"> 
-            <img src="Anice/2.jpg" alt="Image 2" width="300">
-            <img src="Anice/3.jpg" alt="Image 3" width="300">
-            <img src="Anice/4.jpg" alt="Image 4" width="300">
-            <img src="Anice/5.jpg" alt="Image 5" width="300">
-            <img src="Anice/6.jpg" alt="Image 6" width="300">
-            <img src="Anice/7.jpg" alt="Image 7" width="300">
-            <img src="Anice/8.jpg" alt="Image 8" width="300">
-            <img src="Anice/9.jpg" alt="Image 9" width="300">
-            <img src="Anice/10.png" alt="Image 10" width="300">
-            <img src="Anice/11.jpg" alt="Image 11" width="300">
-            <img src="Anice/12.jpg" alt="Image 12" width="300">
-            <img src="Anice/13.jpg" alt="Image 13" width="300">
-            <img src="Anice/14.jpg" alt="Image 14" width="300">
-            <img src="Anice/15.jpg" alt="Image 15" width="300">
-            <img src="Anice/16.jpg" alt="Image 16" width="300">
-            <img src="Anice/17.jpg" alt="Image 17" width="300">
-            <img src="Anice/19.jpg" alt="Image 19" width="300">
+            <img src="Anice/1.jpg" alt="Image 1" width="300" class="thumb"> 
+            <img src="Anice/2.jpg" alt="Image 2" width="300" class="thumb">
+            <img src="Anice/3.jpg" alt="Image 3" width="300" class="thumb">
+            <img src="Anice/4.jpg" alt="Image 4" width="300" class="thumb">
+            <img src="Anice/5.jpg" alt="Image 5" width="300" class="thumb">
+            <img src="Anice/6.jpg" alt="Image 6" width="300" class="thumb">
+            <img src="Anice/7.jpg" alt="Image 7" width="300" class="thumb">
+            <img src="Anice/8.jpg" alt="Image 8" width="300" class="thumb">
+            <img src="Anice/9.jpg" alt="Image 9" width="300" class="thumb">
+            <img src="Anice/10.png" alt="Image 10" width="300" class="thumb">
+            <img src="Anice/11.jpg" alt="Image 11" width="300" class="thumb">
+            <img src="Anice/12.jpg" alt="Image 12" width="300" class="thumb">
+            <img src="Anice/13.jpg" alt="Image 13" width="300" class="thumb">
+            <img src="Anice/14.jpg" alt="Image 14" width="300" class="thumb">
+            <img src="Anice/15.jpg" alt="Image 15" width="300" class="thumb">
+            <img src="Anice/16.jpg" alt="Image 16" width="300" class="thumb">
+            <img src="Anice/17.jpg" alt="Image 17" width="300" class="thumb">
+            <img src="Anice/19.jpg" alt="Image 19" width="300" class="thumb">
+        </div>
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="close" id="closeBtn" aria-label="Zapri">X</button>
+            <img id="lightboxImg" src="" alt="Večja slika">
         </div>
     </h2>
+    <script>
+        const grid = document.querySelector('.grid')
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeBtn');
+
+        grid.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'IMG') return;
+            lightboxImg.src = e.target.src;
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = ' ';
+            lightboxImg.src = ' ';
+            lightbox.setAttribute('aria-hidden', 'true');
+        });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeBtn.click();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                closeBtn.click();
+            }
+        })
+
+    </script>
 </body>
