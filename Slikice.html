@@ -79,24 +79,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;  
-            padding: 10px;
+            gap: 15px;  
+            padding: 0;
+        }
+        .lightbox-content img {
+            max-width: 80vw;
         }
         .caption {
+            width: 90%;
             margin: 0;
             color: whitesmoke;
-            font-size: 12px;
+            font-size: 13px;
             text-align: center;
-            max-width: 90vw;
+            max-width: 100%;
             line-height: 1.2;
             opacity: 0;
-            transform: translateY(10px);  
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(6px);  
+            transition: opacity 2.9s ease, transform 2.9s ease;
+            font-family: Helvetica;
+            font-weight: bold;
+            margin-top: 0;
         }
         .lightbox.open .caption {
             opacity: 1;
             transform: translateY(0); 
         }
+        .lightbox-content,
+.lightbox-content p,
+.lightbox-content img {
+  user-select: none;   /* prevents highlighting on double click */
+}
     </style>
 </head>
 <body>  
@@ -106,33 +118,32 @@
     </div>
     <h2>    
         <div class="grid">
-            <img src="Anice/1.jpg" alt="Image 1" width="300" class="thumb" data-caption="Opis slike 1"> 
-            <img src="Anice/2.jpg" alt="Image 2" width="300" class="thumb" data-caption="Opis slike 2">
-            <img src="Anice/3.jpg" alt="Image 3" width="300" class="thumb" data-caption="Opis slike 3">
-            <img src="Anice/4.jpg" alt="Image 4" width="300" class="thumb" data-caption="Opis slike 4">
-            <img src="Anice/5.jpg" alt="Image 5" width="300" class="thumb" data-caption="Opis slike 5">
-            <img src="Anice/6.jpg" alt="Image 6" width="300" class="thumb" data-caption="Opis slike 6">
-            <img src="Anice/7.jpg" alt="Image 7" width="300" class="thumb" data-caption="Opis slike 7">
-            <img src="Anice/8.jpg" alt="Image 8" width="300" class="thumb" data-caption="Opis slike 8">
-            <img src="Anice/9.jpg" alt="Image 9" width="300" class="thumb" data-caption="Opis slike 9">
-            <img src="Anice/10.png" alt="Image 10" width="300" class="thumb" data-caption="Opis slike 10">
-            <img src="Anice/11.jpg" alt="Image 11" width="300" class="thumb" data-caption="Opis slike 11">
-            <img src="Anice/12.jpg" alt="Image 12" width="300" class="thumb" data-caption="Opis slike 12">
-            <img src="Anice/13.jpg" alt="Image 13" width="300" class="thumb" data-caption="Opis slike 13">
-            <img src="Anice/14.jpg" alt="Image 14" width="300" class="thumb" data-caption="Opis slike 14">
-            <img src="Anice/15.jpg" alt="Image 15" width="300" class="thumb" data-caption="Opis slike 15">
-            <img src="Anice/16.jpg" alt="Image 16" width="300" class="thumb" data-caption="Opis slike 16">
-            <img src="Anice/17.jpg" alt="Image 17" width="300" class="thumb" data-caption="Opis slike 17">
-            <img src="Anice/19.jpg" alt="Image 19" width="300" class="thumb" data-caption="Opis slike 19">
+            <img src="Anice/1.jpg" alt="Image 1" width="300" class="thumb" data-caption="15. September - Barvanje lesenega stojala"> 
+            <img src="Anice/2.jpg" alt="Image 2" width="300" class="thumb" data-caption="15. September - Skincare routine pred Nebesko Udico">
+            <img src="Anice/3.jpg" alt="Image 3" width="300" class="thumb" data-caption="16. September - Konzultacije">
+            <img src="Anice/4.jpg" alt="Image 4" width="300" class="thumb" data-caption="16. September - Moja punca (na levi)">
+            <img src="Anice/5.jpg" alt="Image 5" width="300" class="thumb" data-caption="16. September - Graficni bienale">
+            <img src="Anice/6.jpg" alt="Image 6" width="300" class="thumb" data-caption="16. September - Brunch v dezevnem centru">
+            <img src="Anice/7.jpg" alt="Image 7" width="300" class="thumb" data-caption="16. September - Lepa slikica iz razstave">
+            <img src="Anice/8.jpg" alt="Image 8" width="300" class="thumb" data-caption="19. September - Badminton">
+            <img src="Anice/9.jpg" alt="Image 9" width="300" class="thumb" data-caption="23. September - Poligon pred vrtcem">
+            <img src="Anice/10.png" alt="Image 10" width="300" class="thumb" data-caption="24. September - Domace vrtnice">
+            <img src="Anice/11.jpg" alt="Image 11" width="300" class="thumb" data-caption="25. September - Kifle">
+            <img src="Anice/12.jpg" alt="Image 12" width="300" class="thumb" data-caption="27. September - Juhica">
+            <img src="Anice/13.jpg" alt="Image 13" width="300" class="thumb" data-caption="28. September - Makaroni">
+            <img src="Anice/14.jpg" alt="Image 14" width="300" class="thumb" data-caption="28. September - Izlet ob Savi">
+            <img src="Anice/15.jpg" alt="Image 15" width="300" class="thumb" data-caption="28. September - Cao">
+            <img src="Anice/16.jpg" alt="Image 16" width="300" class="thumb" data-caption="28. September - Magarac">
+            <img src="Anice/17.jpg" alt="Image 17" width="300" class="thumb" data-caption="29. September - Brutalna sladica">
         </div> 
 
         <div class="lightbox" id="lightbox" aria-hidden="true">
             <button class="close" id="closeBtn" aria-label="Zapri">X</button>
 
         
-        <div class="Lightbox-content">
+        <div class="lightbox-content">
           <img id="lightboxImg" src="" alt="Večja slika"> 
-            <p id="LightboxCaption" class="caption" hidden></p>
+            <p id="lightboxCaption" class="caption" hidden></p>
         </div>
         </div>
     </h2>
@@ -141,10 +152,16 @@
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const closeBtn = document.getElementById('closeBtn');
+        const caption = document.getElementById('lightboxCaption');
 
         grid.addEventListener('click', (e) => {
             if (e.target.tagName !== 'IMG') return;
             lightboxImg.src = e.target.src;
+
+            const text = e.target.dataset.caption || '';
+            caption.textContent = text;
+            caption.hidden = !text;
+
             lightbox.classList.add('open');
             lightbox.setAttribute('aria-hidden', 'false');
         });
@@ -153,11 +170,13 @@
             lightbox.classList.remove('open');
             document.body.style.overflow = ' ';
             lightboxImg.src = ' ';
+            caption.textContent = ' ';
+            caption.hidden = true;
             lightbox.setAttribute('aria-hidden', 'true');
         });
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeBtn.click();
-        });
+  if (!e.target.closest('.lightbox-content')) closeBtn.click();
+});
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.classList.contains('open')) {
                 closeBtn.click();
