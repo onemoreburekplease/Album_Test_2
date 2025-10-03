@@ -96,6 +96,11 @@
             transition: transform 0.3s ease;
             transform: scale(1.02);
         }
+        .Dropdown {
+            position: absolute;
+            top: 8vh;
+            right: 4vw
+        }
     </style>
 </head>
 <body> 
@@ -106,9 +111,18 @@
         <h1>
             <p id="Naslov">Magični vlogič v2.0</p>
         </h1>
+
         <div class="Right">
-        <img src="Hamburger.svg" alt="Menu" class="Menu">
+            <img src="Hamburger.svg" alt="Menu" class="Menu" id="Hamburger">
+            <nav class="Dropdown" id="Dropdown">
+                <ul>
+                    <li><a href="Album.html">Albumi</a></li>
+                    <li><a href="Dnevnik.html" target="_blank">Dnevnik</a></li>
+                    <li><a href="Koledar.html" target="_blank">Koledar</a></li>
+                </ul> 
+             </nav>
         </div>
+
     </div>
     <h2>    
         <a href="Slikice.html" target="_blank"> 
