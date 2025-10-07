@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Dnevnik</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="Logo_Dnevnik.svg" type="image/svg+xml"> 
+
+    <style> 
+    .Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100vw;
+        background-color: rgb(210, 220, 200);
+    }
+    .Header h1 {
+        flex: 2;
+        text-align: center;
+        margin: 0;
+    }
+    .Left, .Right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    .Logo {
+        height: 120px;
+        margin-left: 0.5vw;
+        cursor: pointer;
+    }
+    .Menu {
+        height: 75px;
+        margin-right: 10vw;
+        cursor: pointer;
+    }
+    .Left: {
+        Justify-content: flex-start;
+    }
+    .Right { 
+        justify-content: flex-end;
+    }
+    .Dropdown ul {
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+    }
+    #Naslov {
+        text-align: center;
+        color: rgb(103, 102, 69);
+        font-family: bahnschrift;
+        font-size: 33px;
+    }
+    .Dropdown li { 
+          margin: 1vh;
+      }
+    .Dropdown a { 
+            Text-decoration: none;
+            color: rgb(129, 135, 102);
+            font-family: Bahnschrift;
+            font-size: 16px;
+     }
+    </style>
+</head>
+
+<body> 
+    <div class="Header">
+        <div class="Left">
+            <img src="Logo_Dnevnik.svg" alt="Logo" class="Logo">
+        </div>
+            <h1 id="Naslov">Magični dnevnik</h1>
+        <div class="Right">
+            <img src="Hamburger.svg" alt="Menu" class="Menu" id="Hamburger">
+            <nav class="Dropdown" id="Dropdown">
+                <ul>
+                    <li><a href="Album.html">Albumi</a></li>
+                    <li><a href="Dnevnik.html" target="_blank">Dnevnik</a></li>
+                    <li><a href="Koledar.html" target="_blank">Koledar</a></li>
+                </ul> 
+             </nav>
+        </div>
+    </div>
+
+
+
+</body>
