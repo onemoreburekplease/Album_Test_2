@@ -24,16 +24,16 @@
         align-items: center;
     }
     .Logo {
-        height: 120px;
+        height: 105px;
         margin-left: 0.5vw;
         cursor: pointer;
     }
     .Menu {
-        height: 75px;
+        height: 42px;
         margin-right: 10vw;
         cursor: pointer;
     }
-    .Left: {
+    .Left {
         Justify-content: flex-start;
     }
     .Right { 
@@ -50,6 +50,17 @@
         font-family: bahnschrift;
         font-size: 33px;
     }
+    .Dropdown {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: rgb(210, 220, 200);
+        border: 1px solid rgb(129, 135, 102);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
     .Dropdown li { 
           margin: 1vh;
       }
@@ -58,6 +69,14 @@
             color: rgb(129, 135, 102);
             font-family: Bahnschrift;
             font-size: 16px;
+     }
+     body {
+        background-color: rgb(246, 242, 219);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0px;
      }
     </style>
 </head>
@@ -79,7 +98,15 @@
              </nav>
         </div>
     </div>
+    <script> 
 
+        const hamburger = document.getElementById('Hamburger');
+        const dropdown = document.getElementById('Dropdown');
+
+        hamburger.addEventListener("click", () => {
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+    </script>
 
 
 </body>
