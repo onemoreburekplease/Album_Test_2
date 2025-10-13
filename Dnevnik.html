@@ -7,7 +7,7 @@
     <style> 
     :root {
         font-family: Helvetica;
-        --note_bg: #f4f4f4;
+        --note_bg: #f5f2eb;
         --note_shadow: rgba(0, 0, 0, 0.2);
     }
     .Header {
@@ -81,7 +81,18 @@
     }
     .Note:hover {
          transform: translateY(-3px) scale(1.015);
-         box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+         box-shadow: 0 14px 20px rgba(0,0,0,0.3);
+    }
+    .Note .Preview {
+        font-size: 16px;
+        color: rgb(103, 102, 69);
+        font-family: Bahnschrift;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Limit to 4 lines */
+        -webkit-box-orient: vertical;
     }
     .notes-grid { 
         display: grid;
@@ -139,12 +150,12 @@
          </article>
 
          <article class="Note" data-full="Drugi zapis — več informacij in misli o projektu. Lahko vsebuje več vrstic in celo odstavke." data-date="2025-09-30">
-               <div class="preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
+               <div class="Preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
              <time datetime="2025-09-30">30. sep 2025</time>
          </article>
 
          <article class="Note" data-full="Tretji zapis: ideja za sliko, skica besedila in povezane opombe." data-date="2025-09-15">
-              <div class="preview">Tretji zapis: ideja za sliko in skica.</div>
+              <div class="Preview">Tretji zapis: ideja za sliko in skica.</div>
              <time datetime="2025-09-15">15. sep 2025</time>
          </article>
     </div>
