@@ -69,10 +69,10 @@
     .Note {
         background: var(--note_bg);
         padding: 1rem;
-        border-radius: 12px;
+        border-radius: 18px;
         box-shadow: 0 6px 18px var(--note_shadow);
         cursor: pointer;
-        min-height: 120px;
+        min-height: 110px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -125,20 +125,23 @@
     </div>
 
     <div class="Notes_Grid">
+
+                <!--each .Note stores the full note text in data-full. The .preview shows the short text in the grid; time shows the date. -->
+
          <article class="Note" data-full="Poln zapis prvega dnevnika. Tukaj dodaj daljši tekst, ideje, misli." data-date="2025-10-07">
-    <div class="preview">Poln zapis prvega dnevnika. Tukaj dodaj krajšo predogledno verzijo — nekaj stavkov, ki prikažejo bistvo zapisa.</div>
-    <time datetime="2025-10-07">7. okt 2025</time>
-  </article>
+               <div class="Preview">Poln zapis prvega dnevnika. Tukaj dodaj krajšo predogledno verzijo — nekaj stavkov, ki prikažejo bistvo zapisa.</div>
+                <time datetime="2025-10-07">7. okt 2025</time>
+         </article>
 
-  <article class="Note" data-full="Drugi zapis — več informacij in misli o projektu. Lahko vsebuje več vrstic in celo odstavke." data-date="2025-09-30">
-    <div class="preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
-    <time datetime="2025-09-30">30. sep 2025</time>
-  </article>
+         <article class="Note" data-full="Drugi zapis — več informacij in misli o projektu. Lahko vsebuje več vrstic in celo odstavke." data-date="2025-09-30">
+               <div class="preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
+             <time datetime="2025-09-30">30. sep 2025</time>
+         </article>
 
-  <article class="Note" data-full="Tretji zapis: ideja za sliko, skica besedila in povezane opombe." data-date="2025-09-15">
-    <div class="preview">Tretji zapis: ideja za sliko in skica.</div>
-    <time datetime="2025-09-15">15. sep 2025</time>
-  </article>
+         <article class="Note" data-full="Tretji zapis: ideja za sliko, skica besedila in povezane opombe." data-date="2025-09-15">
+              <div class="preview">Tretji zapis: ideja za sliko in skica.</div>
+             <time datetime="2025-09-15">15. sep 2025</time>
+         </article>
     </div>
 
     <div class="Notes_Lightbox" id="Notes_Lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
