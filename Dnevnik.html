@@ -77,6 +77,11 @@
         flex-direction: column;
         justify-content: space-between;
         user-select: text;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .Note:hover {
+         transform: translateY(-6px) scale(1.02);
+         box-shadow: 0 14px 30px rgba(0,0,0,0.22);
     }
     .notes-grid { 
         display: grid;
