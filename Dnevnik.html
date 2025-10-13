@@ -5,6 +5,11 @@
     <link rel="icon" href="Logo_Dnevnik.svg" type="image/svg+xml"> 
 
     <style> 
+    :root {
+        font-family: Helvetica;
+        --note_bg: #f4f4f4;
+        --note_shadow: rgba(0, 0, 0, 0.2);
+    }
     .Header {
         display: flex;
         align-items: center;
@@ -61,6 +66,26 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
       }
+    .Note {
+        background: var(--note_bg);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px var(--note_shadow);
+        cursor: pointer;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        user-select: text;
+    }
+    .notes-grid { 
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.25rem;
+        align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .Dropdown li { 
           margin: 1vh;
       }
@@ -86,7 +111,7 @@
         <div class="Left">
             <img src="Logo_Dnevnik.svg" alt="Logo" class="Logo">
         </div>
-            <h1 id="Naslov">Magični dnevnik</h1>
+            <h1 id="Naslov">Dnevnik</h1>
         <div class="Right">
             <img src="Hamburger.svg" alt="Menu" class="Menu" id="Hamburger">
             <nav class="Dropdown" id="Dropdown">
@@ -98,6 +123,42 @@
              </nav>
         </div>
     </div>
+
+    <div class="Notes_Grid">
+         <article class="Note" data-full="Poln zapis prvega dnevnika. Tukaj dodaj daljši tekst, ideje, misli." data-date="2025-10-07">
+    <div class="preview">Poln zapis prvega dnevnika. Tukaj dodaj krajšo predogledno verzijo — nekaj stavkov, ki prikažejo bistvo zapisa.</div>
+    <time datetime="2025-10-07">7. okt 2025</time>
+  </article>
+
+  <article class="Note" data-full="Drugi zapis — več informacij in misli o projektu. Lahko vsebuje več vrstic in celo odstavke." data-date="2025-09-30">
+    <div class="preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
+    <time datetime="2025-09-30">30. sep 2025</time>
+  </article>
+
+  <article class="Note" data-full="Tretji zapis: ideja za sliko, skica besedila in povezane opombe." data-date="2025-09-15">
+    <div class="preview">Tretji zapis: ideja za sliko in skica.</div>
+    <time datetime="2025-09-15">15. sep 2025</time>
+  </article>
+    </div>
+
+    <div class="Notes_Lightbox" id="Notes_Lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
+        <div class="note-lightbox-content">
+            <button class="close" id="closeNote">✕</button>
+            <h2 id="noteTitle"></h2>
+            <time id="noteDate"></time>
+            <p id="noteFull"></p>
+        </div>
+
+
+        <div class="Notes_lightbox_Content">                                                        <!-- This is the content on top of that black curtain-->
+
+            <h2 id="Note_Title"></h2>
+
+            </div>
+
+    </div>
+
+
     <script> 
 
         const hamburger = document.getElementById('Hamburger');

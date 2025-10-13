@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+    <title>Oktober</title>
+    <link rel="icon" href="Anice/19.jpg" type="image/png">
+     <style>
+        
+        #Naslov {
+            text-align: center;
+            color: rgb(45, 69, 184);
+            font-family: bahnschrift;
+            font-size: 33px;
+            max-width: 100vw;
+        }
+
+        body {
+            background-color: rgb(246, 242, 219);
+        }
+        .grid img{
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            border: 3px solid rgb(194, 188, 173);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 8px rgba(35, 34, 32, 0.8);
+    
+        }
+        .grid {
+               display: grid;
+               grid-template-columns: repeat(4, 1fr);
+               gap: 17px;
+              justify-items: center;
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        .lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox img {
+            max-width: 30vw;
+            max-height: 80vh;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .lightbox.open img {
+            transform: scale(1);
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 2.5%;
+            right: 2%;
+            background: rgba(224, 214, 193, 0.2);
+            color: rgb(255, 255, 255);
+            border: none;
+            font-family: Helvetica, sans-serif; 
+            font-size: 25px;
+            line-height: 1;
+            padding: 6px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .lightbox-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;  
+            padding: 0;
+        }
+        .lightbox-content img {
+            max-width: 80vw;
+        }
+        .caption {
+            width: 90%;
+            margin: 0;
+            color: whitesmoke;
+            font-size: 13px;
+            text-align: center;
+            max-width: 100%;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(6px);  
+            transition: opacity 2.9s ease, transform 2.9s ease;
+            font-family: Helvetica;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .lightbox.open .caption {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+        .lightbox-content,
+.lightbox-content p,
+.lightbox-content img {
+  user-select: none;   /* prevents highlighting on double click */
+}
+    </style>
+</head>
+<body>  
+    <div class="header"><h1>   
+        <p id="Naslov">Oktober</p>
+    </h1>
+    </div>
+    <h2>    
+        <div class="grid">
+            <img src="Anice_Oktober/1.jpg" alt="Image 1" width="300" class="thumb" data-caption="15. September - Barvanje lesenega stojala"> 
+            <img src="Anice_Oktober/2.jpg" alt="Image 2" width="300" class="thumb" data-caption="15. September - Skincare routine pred Nebesko Udico">
+            <img src="Anice_Oktober/4.jpg" alt="Image 3" width="300" class="thumb" data-caption="16. September - Konzultacije">
+            <img src="Anice_Oktober/5.jpg" alt="Image 4" width="300" class="thumb" data-caption="16. September - Moja punca (na levi)">
+            <img src="Anice_Oktober/6.jpg" alt="Image 5" width="300" class="thumb" data-caption="16. September - Graficni bienale">
+            <img src="Anice_Oktober/7.jpg" alt="Image 6" width="300" class="thumb" data-caption="16. September - Brunch v dezevnem centru">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
+             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">             
+        </div> 
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="close" id="closeBtn" aria-label="Zapri">X</button>
+
+        
+        <div class="lightbox-content">
+          <img id="lightboxImg" src="" alt="Večja slika"> 
+            <p id="lightboxCaption" class="caption" hidden></p>
+        </div>
+        </div>
+    </h2>
+    <script>
+        const grid = document.querySelector('.grid')
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeBtn');
+        const caption = document.getElementById('lightboxCaption');
+
+        grid.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'IMG') return;
+            lightboxImg.src = e.target.src;
+
+            const text = e.target.dataset.caption || '';
+            caption.textContent = text;
+            caption.hidden = !text;
+
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = ' ';
+            lightboxImg.src = ' ';
+            caption.textContent = ' ';
+            caption.hidden = true;
+            lightbox.setAttribute('aria-hidden', 'true');
+        });
+        lightbox.addEventListener('click', (e) => {
+  if (!e.target.closest('.lightbox-content')) closeBtn.click();
+});
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                closeBtn.click();
+            }
+        })
+
+    </script>
+</body>
