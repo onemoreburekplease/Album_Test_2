@@ -92,6 +92,7 @@
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 4; /* Limit to 4 lines */
+        line-clamp: 4; /* Standard property for compatibility */
         -webkit-box-orient: vertical;
     }
     .notes-grid { 
@@ -101,6 +102,14 @@
         align-items: start;
         max-width: 1200px;
         margin: 0 auto;
+    }
+    .Note time {    
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: rgb(129, 135, 102);
+        font-family: Bahnschrift;
+        opacity: 0.9;
     }
     .Dropdown li { 
           margin: 1vh;
@@ -140,6 +149,10 @@
         </div>
     </div>
 
+
+
+
+
     <div class="Notes_Grid">
 
                 <!--each .Note stores the full note text in data-full. The .preview shows the short text in the grid; time shows the date. -->
@@ -159,6 +172,11 @@
              <time datetime="2025-09-15">15. sep 2025</time>
          </article>
     </div>
+
+
+
+
+    
 
     <div class="Notes_Lightbox" id="Notes_Lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
         <div class="note-lightbox-content">
