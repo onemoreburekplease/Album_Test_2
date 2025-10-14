@@ -128,6 +128,18 @@
         justify-content: flex-start;
         margin: 0px;
      }
+     .Notes_Lightbox {  
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.8);
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 2000;
+        padding: 2rem;
+     }
     </style>
 </head>
 
@@ -176,7 +188,7 @@
 
 
 
-    
+
 
     <div class="Notes_Lightbox" id="Notes_Lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
         <div class="note-lightbox-content">
@@ -192,7 +204,6 @@
             <h2 id="Note_Title"></h2>
 
             </div>
-
     </div>
 
 
