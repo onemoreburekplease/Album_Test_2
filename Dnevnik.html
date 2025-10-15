@@ -66,7 +66,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
       }
-    .Note {
+    .note {
         background: var(--note_bg);
         padding: 1rem;
         border-radius: 18px;
@@ -79,11 +79,11 @@
         user-select: text;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .Note:hover {
+    .note:hover {
          transform: translateY(-3px) scale(1.015);
          box-shadow: 0 14px 20px rgba(0,0,0,0.3);
     }
-    .Note .Preview {
+    .note .preview {
         font-size: 16px;
         color: rgb(103, 102, 69);
         font-family: Bahnschrift;
@@ -97,13 +97,13 @@
     }
     .notes-grid { 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1.5rem;
         align-items: start;
         max-width: 1200px;
         margin: 0 auto;
     }
-    .Note time {    
+    .note time {    
         display: block;
         margin-top: 0.5rem;
         font-size: 0.875rem;
@@ -128,7 +128,7 @@
         justify-content: flex-start;
         margin: 0px;
      }
-     .Notes_Lightbox {  
+     .notes-lightbox {  
         position: fixed;
         inset: 0;
         display: flex;
@@ -140,6 +140,39 @@
         z-index: 2000;
         padding: 2rem;
      }
+     .notes-lightbox.open {
+        visibility: visible;
+        opacity: 1;
+     }
+     .note-lightbox-content {
+        background: #f6f0e1;
+        max-width: min(70ch, 90vw);
+        width: 100%;
+        border-radius: 10px;
+        padding: 1.5rem;
+        position: relative;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+     }
+     .note-lightbox-content .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: transparent;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+     }
+            #noteTitle { margin: 0 0 .25rem 0; font-size: 1.25rem; color: #222; }
+            #noteDate { display:block; font-size: 0.9rem; color:#666; margin-bottom: .75rem; }
+          #noteFull { font-size: 1rem; line-height: 1.5; color:#333; white-space: pre-wrap; }
+
+        .note-lightbox-content h2,
+        .note-lightbox-content time,
+        .note-lightbox-content p {
+        font-family: Bahnschrift, sans-serif;
+        }
+        
+    }
     </style>
 </head>
 
@@ -165,23 +198,23 @@
 
 
 
-    <div class="Notes_Grid">
+    <div class="notes-grid">
 
                 <!--each .Note stores the full note text in data-full. The .preview shows the short text in the grid; time shows the date. -->
 
-         <article class="Note" data-full="Poln zapis prvega dnevnika. Tukaj dodaj daljši tekst, ideje, misli." data-date="2025-10-07">
-               <div class="Preview">Poln zapis prvega dnevnika. Tukaj dodaj krajšo predogledno verzijo — nekaj stavkov, ki prikažejo bistvo zapisa.</div>
-                <time datetime="2025-10-07">7. okt 2025</time>
+         <article class="note" data-full="Pripeljal sem se do Vojkove okoli petih, pol šestih. Ana in Mia sta zamujale, saj sta šla v park spuščati zmaja. Dobil sem Mango zeleni čaj bubble tea z jagodnimi bobami. Ana je pakirala (kosmiče, jogurt in arašidovo maslo). Štartala sva okoli šestih, Mio sva odpeljala do avtobusne postaje pri BTCju in se vklopila na avtocesto." data-date="2025-10-11">
+               <div class="preview">Zagreb maraton [Sobota]</div>
+                <time datetime="2025-10-11">11. okt 2025</time>
          </article>
 
-         <article class="Note" data-full="Drugi zapis — več informacij in misli o projektu. Lahko vsebuje več vrstic in celo odstavke." data-date="2025-09-30">
-               <div class="Preview">Drugi zapis — kratka verzija, ki se prikaže v mreži.</div>
-             <time datetime="2025-09-30">30. sep 2025</time>
+         <article class="note" data-full="Parkiral sem avto pred Vojkovo okoli sedmih." data-date="2025-10-10">
+               <div class="preview">Prljavo kazalište koncert.</div>
+             <time datetime="2025-10-10">10. okt 2025</time>
          </article>
 
-         <article class="Note" data-full="Tretji zapis: ideja za sliko, skica besedila in povezane opombe." data-date="2025-09-15">
-              <div class="Preview">Tretji zapis: ideja za sliko in skica.</div>
-             <time datetime="2025-09-15">15. sep 2025</time>
+         <article class="note" data-full="Vstala sva skupaj okoli 8:30. Oblekla sva se, prijela za rokice in odšla proti galeriji." data-date="2025-09-15">
+              <div class="preview">ZDSLU Galerija.</div>
+             <time datetime="2025-10-04">4. okt 2025</time>
          </article>
     </div>
 
@@ -190,20 +223,13 @@
 
 
 
-    <div class="Notes_Lightbox" id="Notes_Lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
+    <div class="notes-lightbox" id="notes-lightbox" aria-hidden="true">                         <!--This is the black overlay after you click on a note, black curtain on stange, when the light shows up -->
         <div class="note-lightbox-content">
             <button class="close" id="closeNote">✕</button>
             <h2 id="noteTitle"></h2>
             <time id="noteDate"></time>
             <p id="noteFull"></p>
         </div>
-
-
-        <div class="Notes_lightbox_Content">                                                        <!-- This is the content on top of that black curtain-->
-
-            <h2 id="Note_Title"></h2>
-
-            </div>
     </div>
 
 
@@ -215,6 +241,44 @@
         hamburger.addEventListener("click", () => {
             dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         });
+
+        const grid = document.querySelector('.notes-grid');
+        const lightbox = document.getElementById('notes-lightbox');
+        const lbContent = document.querySelector('.note-lightbox-content');
+        const closeBtn = document.getElementById('closeNote');
+        const lbTitle = document.getElementById('noteTitle');
+        const lbDate = document.getElementById('noteDate');
+        const lbFull = document.getElementById('noteFull');
+
+        grid.addEventListener('click', (e) => {
+            const note = e.target.closest('.note');
+            if (!note) return;
+
+         lbTitle.textContent = note.querySelector('.preview').textContent.slice(0, 60) || 'Zapisk';
+            lbDate.textContent = note.dataset.date || note.querySelector('time')?.textContent || '';
+            lbFull.textContent = note.dataset.full || 'Brez vsebine';
+            // show
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+  if (!e.target.closest('.note-lightbox-content')) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  lbTitle.textContent = '';
+      lbDate.textContent = '';
+     lbFull.textContent = '';
+}
     </script>
 
 
