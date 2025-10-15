@@ -68,7 +68,7 @@
       }
     .note {
         background: var(--note_bg);
-        padding: 1rem;
+        padding: 1.3rem;
         border-radius: 18px;
         box-shadow: 0 6px 18px var(--note_shadow);
         cursor: pointer;
@@ -77,7 +77,7 @@
         flex-direction: column;
         justify-content: space-between;
         user-select: text;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform 0.3s ease, box-shadow 0.2s ease;
     }
     .note:hover {
          transform: translateY(-3px) scale(1.015);
@@ -97,11 +97,12 @@
     }
     .notes-grid { 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1.5rem;
         align-items: start;
         max-width: 1200px;
         margin: 0 auto;
+        margin-top: 1rem;
     }
     .note time {    
         display: block;
@@ -170,9 +171,8 @@
         .note-lightbox-content time,
         .note-lightbox-content p {
         font-family: Bahnschrift, sans-serif;
+        color: rgb(103, 102, 69);
         }
-        
-    }
     </style>
 </head>
 
