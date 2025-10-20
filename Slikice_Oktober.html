@@ -15,24 +15,27 @@
         body {
             background-color: rgb(246, 242, 219);
         }
-        .grid img{
-            width: 300px;
+        .thumb{
+            width: 22vw;
             height: auto;
             object-fit: cover;
             border: 3px solid rgb(194, 188, 173);
-            border-radius: 20px;
+            border-radius: 17px;
             cursor: pointer;
             transition: transform .2s ease, box-shadow .2s ease;
         }
         .grid img:hover {
             transform: scale(1.03);
-            box-shadow: 0 5px 8px rgba(35, 34, 32, 0.8);
-    
+            box-shadow: 0 5px 5px rgba(35, 34, 32, 0.8);
+        }
+        .grid video:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 5px rgba(35, 34, 32, 0.8);
         }
         .grid {
                display: grid;
                grid-template-columns: repeat(4, 1fr);
-               gap: 17px;
+               gap: 22px;
               justify-items: center;
         }
         .lightbox {
@@ -52,7 +55,7 @@
             visibility: visible;
         }
         .lightbox img {
-            max-width: 30vw;
+            max-width: 40vw;
             max-height: 80vh;
             transform: scale(0.95);
             transition: transform 0.3s ease;
@@ -125,20 +128,67 @@
             <img src="Anice_Oktober/5.jpg" alt="Image 4" width="300" class="thumb" data-caption="16. September - Moja punca (na levi)">
             <img src="Anice_Oktober/6.jpg" alt="Image 5" width="300" class="thumb" data-caption="16. September - Graficni bienale">
             <img src="Anice_Oktober/7.jpg" alt="Image 6" width="300" class="thumb" data-caption="16. September - Brunch v dezevnem centru">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">
-             <img src="" alt="Image 6" width="300" class="thumb" data-caption="">             
+            <img src="Anice_Oktober/8.jpg" alt="Image 7" width="300" class="thumb" data-caption="17. September - Pogled iz moje sobe">
+            <img src="Anice_Oktober/10.jpg" alt="Image 8" width="300" class="thumb" data-caption="17. September - Jesenski sprehod">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/11.mp4" type="video/mp4">
+            </video> 
+            <img src="Anice_Oktober/12.jpg" alt="Image 10" width="300" class="thumb" data-caption="18. September - Moja punca in jaz">
+            <img src="Anice_Oktober/13.jpg" alt="Image 11" width="300" class="thumb" data-caption="18. September - Jesenski sprehod z mojo punco">
+            <img src="Anice_Oktober/14.jpg" alt="Image 12"
+                width="300" class="thumb" data-caption="18. September - Jesenski sprehod z mojo punco">
+            <img src="Anice_Oktober/15.jpg" alt="Image 13" width="300" class="thumb" data-caption="19. September - Moja punca in jaz pred Nebesko Udico">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/16.mp4" type="video/mp4">
+            </video> 
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/17.mp4" type="video/mp4">
+            </video>   
+            <img src="Anice_Oktober/18.jpg" alt="Image 16" width="300" class="thumb" data-caption="20. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/19.jpg" alt="Image 17" width="300" class="thumb" data-caption="20. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/20.jpg" alt="Image 18" width="300" class="thumb" data-caption="20. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/21.jpg" alt="Image 19" width="300" class="thumb" data-caption="21. September - Moja punca in jaz pred Nebesko Udico">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/22.mp4" type="video/mp4">
+            </video>
+            <img src="Anice_Oktober/23.jpg" alt="Image 21" width="300" class="thumb" data-caption="22. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/24.jpg" alt="Image 22" width="300" class="thumb" data-caption="22. September - Moja punca in jaz pred Nebesko Udico">      
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/25.mp4" type="video/mp4">
+            </video>                          
+            <img src="Anice_Oktober/26.jpg" alt="Image 24" width="300" class="thumb" data-caption="23. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/27.jpg" alt="Image 25" width="300" class="thumb" data-caption="23. September - Moja punca in jaz pred Nebesko Udico">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/28.mp4" type="video/mp4">
+            </video>    
+            <img src="Anice_Oktober/29.jpg" alt="Image 27" width="300" class="thumb" data-caption="24. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/30.jpg" alt="Image 28" width="300" class="thumb" data-caption="24. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/31.jpg" alt="Image 29" width="300" class="thumb" data-caption="25. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/32.jpg" alt="Image 30" width="300" class="thumb" data-caption="25. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/33.jpg" alt="Image 31" width="300" class="thumb" data-caption="26. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/34.jpg" alt="Image 32" width="300" class="thumb" data-caption="26. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/35.jpg" alt="Image 33" width="300" class="thumb" data-caption="27. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/36.jpg" alt="Image 34" width="300" class="thumb" data-caption="27. September - Moja punca in jaz pred Nebesko Udico">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/37.5.mp4" type="video/mp4">
+            </video>
+            <img src="Anice_Oktober/37.jpg" alt="Image 36" width="300" class="thumb" data-caption="28. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/38.jpg" alt="Image 37" width="300" class="thumb" data-caption="28. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/39.jpg" alt="Image 38" width="300" class="thumb" data-caption="29. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/40.jpg" alt="Image 39" width="300" class="thumb" data-caption="29. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/41.jpg" alt="Image 40" width="300" class="thumb" data-caption="30. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/42.jpg" alt="Image 41" width="300" class="thumb" data-caption="30. September - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/43.jpg" alt="Image 42" width="300" class="thumb" data-caption="1. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/44.jpg" alt="Image 43" width="300" class="thumb" data-caption="1. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/45.jpg" alt="Image 44" width="300" class="thumb" data-caption="2. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/46.jpg" alt="Image 45" width="300" class="thumb" data-caption="2. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/47.jpg" alt="Image 46" width="300" class="thumb" data-caption="3. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/48.jpg" alt="Image 47" width="300" class="thumb" data-caption="3. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/49.jpg" alt="Image 48" width="300" class="thumb" data-caption="4. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/50.jpg" alt="Image 49" width="300" class="thumb" data-caption="4. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/51.jpg" alt="Image 50" width="300" class="thumb" data-caption="5. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/52.jpg" alt="Image 51" width="300" class="thumb" data-caption="5. Oktober - Moja punca in jaz pred Nebesko Udico">
+            <img src="Anice_Oktober/53.jpg" alt="Image 52" width="300" class="thumb" data-caption="6. Oktober - Moja punca in jaz pred Nebesko Udico">            
         </div> 
 
         <div class="lightbox" id="lightbox" aria-hidden="true">
@@ -157,6 +207,63 @@
         const lightboxImg = document.getElementById('lightboxImg');
         const closeBtn = document.getElementById('closeBtn');
         const caption = document.getElementById('lightboxCaption');
+        const lightboxVideo = document.createElement('video');
+        lightboxVideo.controls = true;
+        lightboxVideo.style.maxWidth = '80vw';
+        lightboxVideo.style.maxHeight = '80vh';
+        lightboxVideo.style.borderRadius = '10px';
+        lightboxVideo.style.display = 'none';
+        document.querySelector('.lightbox-content').prepend(lightboxVideo);
+
+        grid.addEventListener('click', (e) => {
+            const target = e.target;
+
+            // IF IMAGE CLICKED
+
+            if (target.tagName === 'IMG') {
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.pause();
+
+                lightboxImg.style.display = 'block';
+                lightboxImg.src = target.src;
+
+                const text = target.dataset.caption || '';
+                caption.textContent = text;
+                caption.hidden = !text;
+
+                lightbox.classList.add('open');
+                lightbox.setAttribute('aria-hidden', false);
+                }
+
+            // IF VIDEO CLICKED
+            if (target.tagName === 'VIDEO') {
+                lightboxImg.style.display = 'none';
+                 lightboxVideo.style.display = 'block';
+                 lightboxVideo.src = target.querySelector('source').src;
+                 lightboxVideo.play();
+
+                 caption.textContent = target.dataset.caption || '';
+                 caption.hidden = false;
+
+                 lightbox.classList.add('open');
+                 lightbox.setAttribute('aria-hidden', 'false');
+            }
+             });
+
+             // FOR HOVERING OVER VIDEO
+
+             const videos = document.querySelectorAll('.grid video');
+             videos.forEach(video => {
+                video.addEventListener('mouseenter', () => {
+                    video.cuttentTime = 0;     //START AT BEGINNING
+                    video.play();
+                });
+                video.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+             });
+
+
 
         grid.addEventListener('click', (e) => {
             if (e.target.tagName !== 'IMG') return;
