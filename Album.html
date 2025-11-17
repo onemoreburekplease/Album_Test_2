@@ -127,11 +127,43 @@
         .Album_Container { 
             display: flex;
             justify-content: center;
-            gap: 65px;
+            gap: 35px;
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 10px;
         }
+        .Map {
+            background-color: rgb(210, 220, 200);
+            width: 100%;
+            position: relative;
+
+        }
+
+        .Map .Ozadje 
+        {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .Map .Map_Button
+        {
+
+            
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            margin-left: 36%;
+
+            top: 40%;
+            transform: translate (-50%, -50%);
+
+            cursor: pointer;
+        }
+
+
     </style>
 </head>
 <body> 
@@ -149,7 +181,7 @@
                 <ul>
                     <li><a href="Album.html">Albumi</a></li>
                     <li><a href="Dnevnik.html" target="_blank">Dnevnik</a></li>
-                    <li><a href="Koledar.html" target="_blank">Koledar</a></li>
+                    <li><a href="Zemljevid.html" target="_blank">Zemljevid</a></li>
                 </ul> 
              </nav>
         </div>
@@ -171,9 +203,29 @@
                     <img src="Anice_Oktober/Kolekcija_Oktober.png" alt="Oktober" width="400" height="400" class="centriraj">
                 </a>
                 <p id="Oktober_Tekst">Oktober 2025</p>
-                <p id="Oktober_Tekst_Spodaj">(Od tetovaž do knjigic)</p>
+                <p id="Oktober_Tekst_Spodaj">(Od Zagreba do čorbice.)</p>
         </div>
+
+             <div class="Album">   
+                <a href="Slikice_Oktober.html" target="_blank">
+                    <img src="Anice_Oktober/Kolekcija_Oktober.png" alt="Oktober" width="400" height="400" class="centriraj">
+                </a>
+                <p id="Oktober_Tekst">November 2025</p>
+                <p id="Oktober_Tekst_Spodaj">(Od Češke do Ikeje.)</p>
+            </div>
+
     </div>
+
+
+    <div class="Map">
+         <img src="Zemljevid_Vlog/Ozadje.png" class="Ozadje" alt="Ozadje">
+
+
+         <a href="Zemljevid.html" class="Map_Button">
+            <img src="Zemljevid_Vlog/Gumbek.png" alt="Gumbek">
+         </a>
+    </div>
+
 
     <div class="footer">
         <h3>    
