@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<head>
+    <title>Oktober</title>
+    <link rel="icon" href="Anice/19.jpg" type="image/png">
+     <style>
+        
+        #Naslov {
+            text-align: center;
+            color: rgb(96, 89, 66);
+            font-family: bahnschrift;
+            font-size: 2.5rem;
+            max-width: 100vw;
+            display: block;
+            width: fit-content;
+            margin: 1rem auto;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        body {
+            background-color: rgb(246, 242, 219);
+        }
+        .thumb{
+            width: 21vw;
+            height: auto;
+            object-fit: cover;
+            border: 3px solid rgb(194, 188, 173);
+            border-radius: 17px;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 5px rgba(35, 34, 32, 0.8);
+        }
+        .grid video:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 5px rgba(35, 34, 32, 0.8);
+        }
+        .grid {
+               display: grid;
+               grid-template-columns: repeat(4, 1fr);
+               gap: 25px;
+              justify-items: center;
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        .lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox img {
+            max-width: 40vw;
+            max-height: 80vh;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .lightbox.open img {
+            transform: scale(1);
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 2.5%;
+            right: 2%;
+            background: rgba(224, 214, 193, 0.2);
+            color: rgb(255, 255, 255);
+            border: none;
+            font-family: Helvetica, sans-serif; 
+            font-size: 25px;
+            line-height: 1;
+            padding: 6px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .lightbox-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;  
+            padding: 0;
+        }
+        .lightbox-content img {
+            max-width: 80vw;
+        }
+        .caption {
+            width: 90%;
+            margin: 0;
+            color: whitesmoke;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 100%;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(6px);  
+            transition: opacity 2.9s ease, transform 2.9s ease;
+            font-family: monospace;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .lightbox.open .caption {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+        .lightbox-content,
+.lightbox-content p,
+.lightbox-content img {
+  user-select: none;   /* prevents highlighting on double click */
+}
+    </style>
+</head>
+<body>  
+    <div class="header"><h1>   
+        <p id="Naslov">Oktober</p>
+    </h1>
+    </div>
+    <h2>    
+        <div class="grid">
+            <img src="Anice_Oktober/1.jpg" alt="Image 1" width="300" class="thumb" data-caption=" 3. Oktober - Malica iz kina Beži"> 
+            <img src="Anice_Oktober/2.jpg" alt="Image 2" width="300" class="thumb" data-caption=" 4. Oktober - Noče ostati zavezana">
+            <img src="Anice_Oktober/4.jpg" alt="Image 3" width="300" class="thumb" data-caption="4. Oktober - Alamut">
+            <img src="Anice_Oktober/5.jpg" alt="Image 4" width="300" class="thumb" data-caption="4. Oktober -  Nalepkice in tetovaže">
+            <img src="Anice_Oktober/6.jpg" alt="Image 5" width="300" class="thumb" data-caption="4. Oktober - Tetovaža in Bogdan videocall">
+            <img src="Anice_Oktober/7.jpg" alt="Image 6" width="300" class="thumb" data-caption="4. Oktober - Prave tetovaže">
+            <img src="Anice_Oktober/8.jpg" alt="Image 7" width="300" class="thumb" data-caption="4. Oktober - Skica">
+            <img src="Anice_Oktober/10.jpg" alt="Image 8" width="300" class="thumb" data-caption="5. Oktober - Pobegnil v Kladušo za 3 noči">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/11.mp4" type="video/mp4">
+            </video> 
+            <img src="Anice_Oktober/12.jpg" alt="Image 10" width="300" class="thumb" data-caption=" 8. Oktober - Promašila">
+            <img src="Anice_Oktober/14.jpg" alt="Image 12"
+                width="300" class="thumb" data-caption="9. Oktober - Cura jednostavno želi ruže">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/16.mp4" type="video/mp4">
+            </video> 
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/17.mp4" type="video/mp4">
+            </video>   
+            <img src="Anice_Oktober/18.jpg" alt="Image 16" width="300" class="thumb" data-caption="11. Oktober - Darilo za mojo tekačico">
+            <img src="Anice_Oktober/19.jpg" alt="Image 17" width="300" class="thumb" data-caption="11. Oktober - Obvezno med potovanjem">
+            <img src="Anice_Oktober/20.jpg" alt="Image 18" width="300" class="thumb" data-caption="11. Oktober - Check in v Zagrebu in gratis rogljički">
+            <img src="Anice_Oktober/21.jpg" alt="Image 19" width="300" class="thumb" data-caption="11. Oktober - Romatična večerja (uprljali smo kavč)">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/22.mp4" type="video/mp4">
+            </video>
+            <img src="Anice_Oktober/23.jpg" alt="Image 21" width="300" class="thumb" data-caption="12. Oktober - Moja sportašica">
+            <img src="Anice_Oktober/24.jpg" alt="Image 22" width="300" class="thumb" data-caption="12. Oktober - Prelep dan v Zagrebu">      
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/25.mp4" type="video/mp4">
+            </video>                          
+            <img src="Anice_Oktober/26.jpg" alt="Image 24" width="300" class="thumb" data-caption="12. Oktober - Jaz sem tudi dobu medaljo za najboljšega fanta btw">
+            <img src="Anice_Oktober/27.jpg" alt="Image 25" width="300" class="thumb" data-caption="12. Oktober - Moramo da nazdravimo">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/28.mp4" type="video/mp4">
+            </video>    
+            <img src="Anice_Oktober/29.jpg" alt="Image 27" width="300" class="thumb" data-caption="12. Oktober - Grad Mokrice na poti domov, malica">
+            <img src="Anice_Oktober/30.jpg" alt="Image 28" width="300" class="thumb" data-caption="12. Oktober - Grad Mokrice">
+            <img src="Anice_Oktober/31.jpg" alt="Image 29" width="300" class="thumb" data-caption="12. Oktober - Ovo je moja kuća">
+            <img src="Anice_Oktober/32.jpg" alt="Image 30" width="300" class="thumb" data-caption="12. Oktober - To sliko so zoomirali domači med Slavo">
+            <img src="Anice_Oktober/33.jpg" alt="Image 31" width="300" class="thumb" data-caption="12. Oktober - Kako se roditelji slikajo na Viberu">
+            <img src="Anice_Oktober/34.jpg" alt="Image 32" width="300" class="thumb" data-caption="12. Oktober - Gremo na malico">
+            <img src="Anice_Oktober/35.jpg" alt="Image 33" width="300" class="thumb" data-caption="12. Oktober - Pozdrav">
+            <img src="Anice_Oktober/36.jpg" alt="Image 34" width="300" class="thumb" data-caption="12. Oktober - Treba jesti nakon maratona">
+            <video class="thumb" muted loop preload="metadata" width="300">
+                <source src="Anice_Oktober/37.5.mp4" type="video/mp4">
+            </video>
+            <img src="Anice_Oktober/37.jpg" alt="Image 36" width="300" class="thumb" data-caption="12. Oktober - Kostanjevica ob Krki 1">
+            <img src="Anice_Oktober/38.jpg" alt="Image 37" width="300" class="thumb" data-caption="12. Oktober - Kostanjevica ob Krki 2">
+            <img src="Anice_Oktober/39.jpg" alt="Image 38" width="300" class="thumb" data-caption="12. Oktober - Kostanjevica ob Krki 3">
+            <img src="Anice_Oktober/40.jpg" alt="Image 39" width="300" class="thumb" data-caption="12. Oktober - Enostavno ima rada rožice">
+            <img src="Anice_Oktober/41.jpg" alt="Image 40" width="300" class="thumb" data-caption="12. Oktober - Kostanjevica ob Krki 4">
+            <img src="Anice_Oktober/42.jpg" alt="Image 41" width="300" class="thumb" data-caption="12. Oktober - Wow kako je cozy">
+            <img src="Anice_Oktober/43.jpg" alt="Image 42" width="300" class="thumb" data-caption="12. Oktober - Kristalna Krka">
+            <img src="Anice_Oktober/44.jpg" alt="Image 43" width="300" class="thumb" data-caption="12. Oktober - Zdravoo, evo nas">
+            <img src="Anice_Oktober/45.jpg" alt="Image 44" width="300" class="thumb" data-caption="12. Oktober - <3 ">
+            <img src="Anice_Oktober/46.jpg" alt="Image 45" width="300" class="thumb" data-caption="12. Oktober - Malenkosti u životu">
+            <img src="Anice_Oktober/47.jpg" alt="Image 46" width="300" class="thumb" data-caption="12. Oktober - Ratalo nam je ujeti Halidov koncert">
+            <img src="Anice_Oktober/48.jpg" alt="Image 47" width="300" class="thumb" data-caption="13. Oktober - Kako je to dobro skuhala ljudi moji">
+            <img src="Anice_Oktober/49.jpg" alt="Image 48" width="300" class="thumb" data-caption="16. Oktober - Tukaj imam ful lepe lase">
+            <img src="Anice_Oktober/50.jpg" alt="Image 49" width="300" class="thumb" data-caption="17. Oktober - Malenkosti u životu">
+            <img src="Anice_Oktober/51.jpg" alt="Image 50" width="300" class="thumb" data-caption="17. Oktober - Palačine za brunch">
+            <img src="Anice_Oktober/52.jpg" alt="Image 51" width="300" class="thumb" data-caption="17. Oktober - Kupila mi je knjigo ker je spooky sezona">
+            <img src="Anice_Oktober/53.jpg" alt="Image 52" width="300" class="thumb" data-caption="18. Oktober - Meal prep boranije">            
+        </div> 
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="close" id="closeBtn" aria-label="Zapri">X</button>
+
+        
+        <div class="lightbox-content">
+          <img id="lightboxImg" src="" alt="Večja slika"> 
+            <p id="lightboxCaption" class="caption" hidden></p>
+        </div>
+        </div>
+    </h2>
+    <script>
+        const grid = document.querySelector('.grid')
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeBtn');
+        const caption = document.getElementById('lightboxCaption');
+        const lightboxVideo = document.createElement('video');
+        lightboxVideo.controls = true;
+        lightboxVideo.style.maxWidth = '80vw';
+        lightboxVideo.style.maxHeight = '80vh';
+        lightboxVideo.style.borderRadius = '10px';
+        lightboxVideo.style.display = 'none';
+        document.querySelector('.lightbox-content').prepend(lightboxVideo);
+
+        grid.addEventListener('click', (e) => {
+            const target = e.target;
+
+            // IF IMAGE CLICKED
+
+            if (target.tagName === 'IMG') {
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.pause();
+
+                lightboxImg.style.display = 'block';
+                lightboxImg.src = target.src;
+
+                const text = target.dataset.caption || '';
+                caption.textContent = text;
+                caption.hidden = !text;
+
+                lightbox.classList.add('open');
+                lightbox.setAttribute('aria-hidden', false);
+                }
+
+            // IF VIDEO CLICKED
+            if (target.tagName === 'VIDEO') {
+                lightboxImg.style.display = 'none';
+                 lightboxVideo.style.display = 'block';
+                 lightboxVideo.src = target.querySelector('source').src;
+                 lightboxVideo.play();
+
+                 caption.textContent = target.dataset.caption || '';
+                 caption.hidden = false;
+
+                 lightbox.classList.add('open');
+                 lightbox.setAttribute('aria-hidden', 'false');
+            }
+             });
+
+             // FOR HOVERING OVER VIDEO
+
+             const videos = document.querySelectorAll('.grid video');
+             videos.forEach(video => {
+                video.addEventListener('mouseenter', () => {
+                    video.cuttentTime = 0;     //START AT BEGINNING
+                    video.play();
+                });
+                video.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+             });
+
+
+
+        grid.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'IMG') return;
+            lightboxImg.src = e.target.src;
+
+            const text = e.target.dataset.caption || '';
+            caption.textContent = text;
+            caption.hidden = !text;
+
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = ' ';
+            lightboxImg.src = ' ';
+            caption.textContent = ' ';
+            caption.hidden = true;
+            lightbox.setAttribute('aria-hidden', 'true');
+        });
+        lightbox.addEventListener('click', (e) => {
+  if (!e.target.closest('.lightbox-content')) closeBtn.click();
+});
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                closeBtn.click();
+            }
+        })
+
+    </script>
+</body>
