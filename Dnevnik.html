@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2px;
+        padding: 0;
         width: 100vw;
         background-color: rgb(210, 220, 200);
     }
@@ -30,12 +30,12 @@
     }
     .Logo {
         height: 105px;
-        margin-left: 0.5vw;
+        padding: 1vh 1vw;
         cursor: pointer;
     }
     .Menu {
         height: 42px;
-        margin-right: 5%;
+        padding: 1vh 1vw;
         cursor: pointer;
     }
     .Left {
@@ -133,6 +133,7 @@
         position: fixed;
         inset: 0;
         display: flex;
+        text-align: justify;
         align-items: center;
         justify-content: center;
         background: rgba(0,0,0,0.72);
@@ -149,11 +150,11 @@
         background: #f6f0e1;
         max-width: min(70ch, 90vw);
         width: 100%;
-        border-radius: 10px;
-        padding: 1.7rem;
+        border-radius: 0.5vw;
+        padding: 1.5rem;
         position: relative;
         box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-        max-height: 80vh;
+        max-height: 75vh;
         overflow-y: auto;
      }
      .note-lightbox-content .close {
@@ -165,9 +166,9 @@
         font-size: 1.25rem;
         cursor: pointer;
      }
-            #noteTitle { margin: 0 0 .25rem 0; font-size: 1.25rem; color: #222; }
-            #noteDate { display:block; font-size: 0.9rem; color:#666; margin-bottom: .75rem; }
-          #noteFull { font-size: 1rem; line-height: 1.5; color:#333; white-space: pre-wrap; }
+            #noteTitle { margin: 0 0 .25rem 0; font-size: 1.5rem; color: #272727; }
+            #noteDate { display:block; font-size: 0.9rem; color:#7e7e7e; margin-bottom: .75rem; }
+          #noteFull { font-size: 1rem; line-height: 1.5; color:#333; white-space: pre-line; }
 
         .note-lightbox-content h2,
         .note-lightbox-content time,
@@ -204,108 +205,148 @@
 
                 <!--each .Note stores the full note text in data-full. The .preview shows the short text in the grid; time shows the date. -->
 
-        <article class="note" data-full="Ana je pregorevala od nočnih izmen, doma ni mogla pisat magistrske naloge, niti je lahko šla v knjižnico. Zato sva se zmenila, naj pridem do nje malo predčasno pred šihtom, in naj odideva skupaj tja. Jaz sem zadnji moment naprintal dve stvari za njo (jih z razlogom razkrijem kasneje) in komaj ujel bus, ker sva se ta plan zadnji moment spomnila. Prišla je ven in sva se sprehodila do šihta mimo stadiona, bila je sobota, tako da je promet bil umirjen in se je lepo sprehajalo. Ko sva prišla v pisarno sem takoj beležil biatlon, ona si je pa pripravila stvari pri mizi nasproti moje. Pokazala mi je, da ne berem veliko več nemške knjige, ker mi je pustila sporočilo notri že nekaj časa nazaj. Prispele sta dve bowle okoli treh, sva ju odložila v kuhinji tam za jesti kadarkoli želiva. Med potjo do pisarne sva se prej zmenila, naj po dveh straneh magistrske (odločila sva se, da lahko realistično napiše štiri) dobi prvo nagrado, in po štirih straneh naj dobi drugo. Napisal sem ji totalno resen pravni dokument, na katerega sva se oba podpisala. Malo odvetniškega pogajanja. Napisala je dve strani (mogoče malo več) strani priprav za nastop, jaz sem pa ravno zaključil biatlon in polovico smučarskih skokov. Prejela je prvo nagrado, sprintano karto Phantoma iz Opere, ko sva ga obiskala v četrtek na Dunaju. Pojedla sva kosilo v jedilnici, naredila dve kavici in odšla nazaj. Malo sva delala karkoli, ona je video-chatala z babi, jaz sem risal na tablo. Odločila sva se naprej delat, našel sem ponesreči Simpsonove in jih gledal. Zunaj je bilo megleno, v piasarni pa cozy osvetljeno. Tudi sva napisala zelo kontruktiven review apartmaja na Dunaju in najine izkušnje z bojlerjem, spomnem se, da je bilo zabavno ocenjevati. Ko se je odločila iti, je prejela še drugo darilo, saj je pošteni del teksta dodala k nalogi in prejela natisnjena bingota iz Dunaja. Odšla je domov in poštempljala obe in verjetno zalepila v svoj dnevnik spominov. Odšla se je malo spočit in naspat, saj je delala tisti večer. Dobil sem najlepše sporočilo svojega življenja. Ko je prišla nazaj, sva zamenjala mesta, ker sem potem jaz pisal za svoje projektno delo. Imela sva lep pogovor glede pregorevanja in denarja, preden sem se odpravil na zadnji bus dneva. Tudi takrat sem prejel lepo sporočilo. Ljubim to ženo. Vse se lažje dela samo zato, ker sva v prisotnosti en drugega, tudi če samo piševa seminarske in piševa pogodbe." data-date="2025-13-12">
+         <article class="note" data-full="Ana je prišla k meni prispat ob 5ih zjutraj, čeprav je delala svojo zadnjo nočno izmeno. Zbudila sva se okoli 12:30 in imela dolg pogovor glede presenečanj in daril, kar je dokončno naju res ojačalo. Spakirala sva se najprej pri meni, potem še pri njej. Spomnem se, da je Ana (po dolgem pogajanju) dobila in z veseljem vzela mamino dolgo jakno, katero je tudi nosila celi čas.
+
+         Na poti do Ptuja sva se ustavila v Celju, saj je hotela kupiti darila za moje domače. Mami sva se odličila kupiti Bajadero, tati velike Toblerone in babici koledar Tite, ki sva ga slučajno opazila v knjigarni! Kupila sva tam za jest, neke malenkosti in jih pojedla dobesedno na avtu, ko je sonce počasi zahajalo.
+
+         Prišla sva v Ptuj - do bogate hiše z velikim dvoriščem, kjer nas je dočakala starejša gospa z lepim in veselim nasmehom in ljubečim karakterjem, ki nas je vodila v starinsko sobo. Razdelila sva si novoletna darila. Jedla sva zdravo in enostavno večerjo, potem sva šla na nočni sprehod po Ptuju. Pot do apartmaja je bila peščena, ki je imela vsake toliko metrov eno klopico s razgledom. Luna je bila popolnoma okrogla, tako da je celo pot osvetlila. Šla sva prvo do gradu, po neki sneženi potki sva se povzpenjala gor do vhoda, ki je bil zaprt. Med potjo nazaj me je nekdo porinil v sneg in sva tam ležala nekaj časa, pol sva ga še jedla. 
+
+         Naredila sva krog po mestu, ki je bil sicer lepo okrašen, ampak je bil tih. Nobeni lokalni kafički niso delali in je včasih bila strašna tišina. Razen pri trgu, tam se je pripravljalo na neko muziko uživo. Med potjo nazaj proti stanovanju, spet na peščeni potkici, ki je spomiljala na tisto iz Šiljegovca, sva se spontano odločila obiskati Maribor. Predvidevala sva, da bo lepši ambient, šla sva v avto in čez približno pol ure prispela. Bila je muzika uživo, malo sva se tam zadrževala. Imela sva približno še slabo uro do polnoči, zato sva hodila okoli mesta. Približno 10-15min pred polnočjo sva sedela na stolih pri drsališču, potem sva odševala sekunde na poti do odra. Veliko domačinov je prineslo svoj ognjemet in spuščalo kjerkoli. Odšla se domov, oblekla se cozy in pripravila za spat. 
+         
+         Naslednje jutro sva se zbudila okoli 8:30, saj sva imela domač, bogat zajtrk z lokalnimi dobrotami. Sir iz lokalne kmetije, domača marmelada, domače maslo in jajca (nam jih je pripravila tudi zelo prijazna gospa, hčerka tiste starejše) tudi domača skuta, salamica in sladičke. Po tem, sita, sva na balkonu naredila še par slikic gradu, tokrat v topli in svetli sončni svetlobi, čeprav je šezmeraj bilo zasneženo belo. Spakirala sva zadnje stvari, jih vrnila v avto in se odpravila na pot, nekam na kavico, prvotno. Parkirala sva nekje ob Dravi, in se odločila za sprehod po mostu nad reko. Srečali smo skupino ljudi, ki so nam zaželeli srečno novo leto, njim smo pa poskrbeli ujeti par slikic pred celotnim Ptujem. Prišla sva na drugo stran reke, da bi skupaj poslikala naselje za spomin. Odpeljala sva se potem vse do Rogaške Slatine, saj sem se jaz odločil za napačen izhod iz avtoceste, kjer sem iskal Roglo, ki naj bi bila (baje) blizu Rogaške Slatine (ni). Pot je bila lepa, sva pa nekje obrnila nazaj proti Ljubljani.
+         
+         Ani sva doma spakirala stvari, saj je ta dan odhajala v Srbijo. Spet sva imela težek ampak lep pogovor glede iskrenosti in zanesljivosti, kar je spet nakoncu dneva okrepilo naju. Odpeljala sva se k meni, jedla sva kosilo zgoraj v kuhinji, razdelila (in dobila!) potem darila in imela tu pa tam pogovore s starši glede knjig, filmov in vsega vmes. Pogledala sva album skupaj, ležala in še kaj (squeeky), preden je bilo treba it. Okoli sedmih sva se odpeljala do busne, tam parkirala in počakala odhod. Še poljubila sva se, si pomahala in že takoj sem jo pogrešal." data-date="1.1.2026">
+               <div class="preview">Ptuj in Maribor (Novo leto)</div>
+                <time datetime="2026-01-01">1. jan 2026</time>
+            </article>
+
+         <article class="note" data-full="" data-date="30.12.2025">
+               <div class="preview">Ocenjevanje Tajskih sladkarij</div>
+                <time datetime="2026-01-01">30. dec 2025</time>
+            </article>
+
+         <article class="note" data-full="" data-date="25.12.2025">
+               <div class="preview">Ocenje Slovaških sladkarij</div>
+                <time datetime="2026-01-01">25. dec 2026</time>
+            </article>
+
+        <article class="note" data-full="Ana je pregorevala od nočnih izmen, doma ni mogla pisat magistrske naloge, niti je lahko šla v knjižnico. Zato sva se zmenila, naj pridem do nje malo predčasno pred šihtom, in naj odideva skupaj tja. Jaz sem zadnji moment naprintal dve stvari (jih z razlogom razkrijem kasneje). Prišla je ven in sva se sprehodila do šihta mimo stadiona, bila je sobota, vodila me je po lepi poti, tako da je promet bil umirjen in se je lepo sprehajalo.
+        
+        Ko sva prišla v pisarno sem takoj začel beležit biatlon, ona si je pa pripravila stvari pri mizi nasproti moje. Pokazala mi je, da ne berem veliko več nemške knjige, ker mi je pustila sporočilo notri že nekaj časa nazaj. Prelepo sporočilo mi je pustila in danes visi na moji tabli. Prispele sta dve bowle okoli treh, sva ju odložila v kuhinji tam za jesti kadarkoli želiva. 
+        
+        Med potjo do pisarne sva se prej zmenila, naj po dveh straneh magistrske (odločila sva se, da lahko realistično napiše štiri) dobi prvo nagrado, in po štirih straneh naj dobi drugo. Napisal sem ji totalno resen pravni dokument, na katerega sva se oba podpisala. Malo odvetniškega pogajanja. Napisala je dve strani (mogoče malo več) strani priprav za nastop, jaz sem pa ravno zaključil biatlon in polovico smučarskih skokov. Prejela je prvo nagrado, sprintano karto Phantoma iz Opere, ko sva ga obiskala v četrtek na Dunaju. Pojedla sva kosilo v jedilnici, naredila dve kavici in odšla nazaj. Malo sva delala karkoli, ona je video-chatala z babi, jaz sem risal na tablo. Odločila sva se naprej delat, našel sem ponesreči Simpsonove in jih gledal. Zunaj je bilo megleno, v pisarni pa cozy osvetljeno. 
+        
+        Tudi sva napisala zelo kontruktiven review apartmaja na Dunaju in najine izkušnje z bojlerjem, spomnem se, da je bilo zabavno ocenjevati. Ko se je odločila iti, je prejela še drugo darilo, saj je pošteni del teksta dodala k nalogi in prejela natisnjena bingota iz Dunaja. Odšla je domov in poštempljala obe in verjetno zalepila v svoj dnevnik spominov. Odšla se je malo spočit in naspat, saj je delala tisti večer. Dobil sem najlepše sporočilo svojega življenja. Ko je prišla nazaj, sva zamenjala mesta, ker sem potem jaz pisal za svoje projektno delo. Imela sva lep pogovor glede pregorevanja in denarja, preden sem se odpravil na zadnji bus dneva. Tudi takrat sem prejel lepo sporočilo. Ljubim to ženo. Vse se lažje dela samo zato, ker sva v prisotnosti en drugega, tudi če samo piševa seminarske in piševa pogodbe." data-date="13.12.2025">
                <div class="preview">Sobota v pisarni</div>
                 <time datetime="2025-10-11">13. dec 2025</time>
         </article>
 
-         <article class="note" data-full="Dan sva začela tako, da sva dokončala Rio 2 s kavico v postelji. Že zjutraj je posijalo sonce. Za zajtrk sva spet pripravila zdravi Brunchie (avocadao na toastu z jajcem in feto). Imela sva bus za Bratislavo ob 10:50, tako da sva imela čas za počasno rihtanje. V torbo sva spakirala vodo in sivi pulover. Nisva našla gate A za Flixbus, sva na kratko vprašala na recepciji. Vožnja je bila lepa, vidli smo vetrovnice, jaz sem sestavljal Bingo grafiko, Ana je igrala igrico. Prispela sva eno postajo prej, pri nekem mostu. Ogledala sva si advent, ki je bil takoj od samega začetka bolj topel, vabljiv, dišeč in glasen kot na Dunaju. Povsod rdeče hišice (štandi), božična glasba na zvočnikih. Takoj sva se presenetila, da je božični market tako boljši od Dunaja. Šla sva tudi do drugega marketa, bilo je ogromno hrane. Plan je bil najprej iti v WC, potem na grad, potem jesti vse. Šla sva v Irish Pub ki je bil božično okrašen, odlični ambient, tam sva naročila dve kavici pa limonado. Tam sva tudi izbrala kasnejši odhod domov, ker je bilo tako lepo. Na poti do gradu je Ana odkljukala par Bingo stvari. Šla sva gor do gradu, en gospod je padel, Ani sem zavezal vezalko. Pot je bila strma, najprej smo zalutali na neke lesene stopnice, nato pa po pravi poti. Zelo je pihalo, slikala sva se pri sprednji strani gradu z razgledom, potem sva še stopila vanj. Nisva našla poti dol, ker so renovirali. Bila sva zelo lačna, na Marketu sva začela z govejim golažom v hlebu, potem sva probala pogačico z goskino mastjo, potem sva pojedla bučno juhico, potem tisto spiralo z orehi, potem palačinko z makom, ona je padla na tla, ko sva naročila čaj. Naredila sva izziv, kjer si oba dava 15 minut časa, da kupiva en drugemu darilo in se vrneva nazaj na določeno mesto. Jaz sem (da jo vržem iz trail-a?) res šel v svojo določeno smer, kjer sem kupil (diversion) darilo, ker sem ji hotu kupit nekaj drugega na njenem delu Marketa. Kupil sem Krtka šalčko in pliškota, laufal vse okoli in kupil tisto tote bag, ki se ji je zdel simpatičen. Res sem laufal. Tote sem skril v torbo, v vrečko pa Krtek stvari. Na poti nazaj proti Dunaju, ko je bila šetnja do reke in okoli lučk zaključena, sem ji šele pokazal vrečko. Prišla sva nazaj in šla direkt proti operi na Phantom iz Opere. Brez besed sva ostala, na poti nazaj proti stanovanju sva samo gigglala in sedela v tišini, ker nisva mogla verjeti, kaj se je zgodilo. Predobro, Chandelier je padal, bilo je ognja, bil je vrhunski set. Prišla sva nazaj presrečna, sedela za mizo, in samo govorila o današnjemu dnevu. Kako se je presedla zreven mene glih ko je začel najbolj romantičen del predstave. Kako je ta plan B (ki sva ga slučajno vzela na poti od Ljubljane) boljši od tiste Mozartove predstave, ki se nam je zdela predraga. Imela sva tudi lep in pomemben pogovor, kaj narediti, če sva naredila napačne prestave en o drugemu. Nakoncu dneva sva vzela samo U6 metro direkt to doma, sedela sva v kuhinji in samo govorila o tem, kako je bil lep dan. Najraje imam to žensko. Vso hrano je hotla probat z mano.
-         Detajli za zapomnit: Barvit tote bag, Barvit Krtek rumeni tote bag, Dunjin komentar da imava oba velke nose in da bo otrok imel lokne; Njeno veselje, ko si ji pokazal vrečo, ki sem jo celi dan skrival v torbi in čakal na tapravi trenutek. Dobre hrane ne pozabi. Dekora v Irish pubu. Kako si skrival ruzak. Razgleda z gradu, pogovora v busu, predstave. Kako je lepo vse to bilo deliti z nekom. Ljubim, ljubim to žensko. Ne pozabi, kako je zjutraj vztraja in kupovala karte za Melk, ko je zanemarjala denar, samo da te osreči, čeprav je že kupila karte za Bratislavo." data-date="2025-11-12">
+         <article class="note" data-full="Dan sva začela tako, da sva dokončala Rio 2 s kavico v postelji. Že zjutraj je posijalo sonce. Za zajtrk sva spet pripravila zdravi Brunchie (avocadao na toastu z jajcem in feto). Imela sva bus za Bratislavo ob 10:50, tako da sva imela čas za počasno rihtanje. V torbo sva spakirala vodo in sivi pulover.
+         
+         Nisva našla gate A za Flixbus, sva na kratko vprašala na recepciji. Vožnja je bila lepa, vidli smo vetrovnice, jaz sem sestavljal Bingo grafiko, Ana je igrala igrico. Prispela sva eno postajo prej, pri nekem mostu. Ogledala sva si advent, ki je bil takoj od samega začetka bolj topel, vabljiv, dišeč in glasen kot na Dunaju. Povsod rdeče hišice (štandi), božična glasba na zvočnikih. Takoj sva se presenetila, da je božični market tako boljši od Dunaja. Šla sva tudi do drugega marketa, bilo je ogromno hrane. Plan je bil najprej iti v WC, potem na grad, potem jesti vse. Šla sva v Irish Pub ki je bil božično okrašen, odlični ambient, tam sva naročila dve kavici pa limonado. Tam sva tudi izbrala kasnejši odhod domov, ker je bilo tako lepo. Na poti do gradu je Ana odkljukala par Bingo stvari. Šla sva gor do gradu, ful je pihalo. Pot je bila strma, najprej smo zalutali na neke lesene stopnice, nato pa po pravi poti. Slikala sva se pri sprednji strani gradu z razgledom, potem sva še stopila vanj. 
+         
+         Nisva našla poti dol, ker so renovirali. Bila sva zelo lačna, na Marketu sva začela z govejim golažom v hlebu, potem sva probala pogačico z goskino mastjo, potem sva pojedla bučno juhico, potem tisto spiralo z orehi, potem palačinko z makom, ona je padla na tla, ko sva naročila čaj. Naredila sva izziv, kjer si oba dava 15 minut časa, da kupiva en drugemu darilo in se vrneva nazaj na določeno mesto. 
+         
+         Jaz sem ji kupil nekaj kar sem res hotel da ima. Nekaj kar ji je bilo zelo všeč in nisem našu priložnost, da jo presenetim. Na poti nazaj proti Dunaju, ko je bila šetnja do reke in okoli lučk zaključena, sem ji šele pokazal kaj sem ji kupil na skrivaj hihi. 
+         
+         Prišla sva nazaj in šla direkt proti operi na Phantom iz Opere. Brez besed sva ostala, na poti nazaj proti stanovanju sva samo gigglala in sedela v tišini, ker nisva mogla verjeti, kaj se je zgodilo. Predobro, Chandelier je padal, bilo je ognja, bil je vrhunski set. Prišla sva nazaj presrečna, sedela za mizo, in samo govorila o današnjemu dnevu. Kako se je presedla zreven mene glih ko je začel najbolj romantičen del predstave. Kako je ta plan B (ki sva ga slučajno vzela na poti od Ljubljane) boljši od tiste Mozartove predstave, ki se nam je zdela predraga. Imela sva tudi lep in pomemben pogovor, kaj narediti, če sva naredila napačne prestave en o drugemu. Nakoncu dneva sva vzela samo U6 metro direkt to doma, sedela sva v kuhinji in samo govorila o tem, kako je bil lep dan. Najraje imam to žensko. Vso hrano je hotla probat z mano.
+
+         Detajli za zapomnit: Barvit tote bag, Barvit Krtek rumeni tote bag, Dunjin komentar da imava oba velike nose in da bo otrok imel lokne; Njeno veselje, ko si ji pokazal vrečo, ki sem jo celi dan skrival v torbi in čakal na tapravi trenutek. Dobre hrane ne pozabi. Dekora v Irish pubu. Kako si skrival ruzak. Razgleda z gradu, pogovora v busu, predstave. Kako je lepo vse to bilo deliti z nekom. Ljubim, ljubim to žensko. Ne pozabi, kako je zjutraj vztraja in kupovala karte za Melk, ko je zanemarjala denar, samo da te osreči, čeprav je že kupila karte za Bratislavo." data-date="11.12.2025">
                <div class="preview">Vienna/Bratislava Tretji dan</div>
                 <time datetime="2025-10-11">11. dec 2025</time>
             </article>
 
-         <article class="note" data-full="Dan sva začela v toplejšem stanovanju, saj sva ugotovila za bojler. Dobil sem kavico v postelji, usedla se je pred mano in sva se odločila gledati Rio 2." data-date="2025-10-12">
+         <article class="note" data-full="Dan sva začela v toplejšem stanovanju, saj sva ugotovila za bojler. Dobil sem kavico v postelji, usedla se je pred mano in sva se odločila gledati Rio 2." data-date="10.12.2025">
                <div class="preview">Vienna Drugi Dan</div>
                 <time datetime="2025-10-11">10. dec 2025</time>
             </article>
 
-         <article class="note" data-full="" data-date="2025-9-12">
+         <article class="note" data-full="" data-date="9.12.2025">
                <div class="preview">Vienna Prvi dan</div>
                 <time datetime="2025-10-11">9. dec 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-10-11">
+         <article class="note" data-full="" data-date="7.12.2025">
                <div class="preview">Privatna predstava (SitiTeater)</div>
                 <time datetime="2025-10-11">7. dec 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-10-11">
+         <article class="note" data-full="" data-date="4.12.2025">
                <div class="preview">Kranjska Gora</div>
                 <time datetime="2025-10-11">4. dec 2025</time>
          </article>
 
-         <article class="note" data-full="Ana je kupila set za izgradnjo božične hišice iz keksa. Dala sva takoj preveč vode v sladkor v prahu, ampak je na srečo Ana kupila že narjenega kot lepilo. Skuhala je nama dve kavici, jaz sem nama naštimal stare udobne božične pesmice. Začela sva s streho, kjer sem na vsako opeko zelepil en mali smarties za dekoracijo. Oziroma ne, najprej sva pojedla dve smrekici, ki sta prišle kot dekor, ker sva oba imela cravingse. Želejasti bomboni se spomnim da so bili veganski ampak res dobri. Zgradila sva hišico, ampak sva tudi takoj pojedla tisto steno, ki je obrnjena proti zidu, sva luknjo stabilizirala z žlico (slika v albumu December)." data-date="2025-9-12">
+         <article class="note" data-full="Ana je kupila set za izgradnjo božične hišice iz keksa. Dala sva takoj preveč vode v sladkor v prahu, ampak je na srečo Ana kupila že narjenega kot lepilo. Skuhala je nama dve kavici, jaz sem nama naštimal stare udobne božične pesmice. Začela sva s streho, kjer sem na vsako opeko zelepil en mali smarties za dekoracijo. Oziroma ne, najprej sva pojedla dve smrekici, ki sta prišle kot dekor, ker sva oba imela cravingse. Želejasti bomboni se spomnim da so bili veganski ampak res dobri. Zgradila sva hišico, ampak sva tudi takoj pojedla tisto steno, ki je obrnjena proti zidu, sva luknjo stabilizirala z žlico (slika v albumu December)." data-date="2.12.2025">
                <div class="preview">Božična hišica</div>
                 <time datetime="2025-10-11">2. dec 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-11-27">
+         <article class="note" data-full="" data-date="27.11.2025">
                <div class="preview">Portorož, Sempl konferenca</div>
                 <time datetime="2025-10-11">27. nov 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-11-18">
+         <article class="note" data-full="" data-date="18.11.2025">
                <div class="preview">Arnes in tobogan</div>
                 <time datetime="2025-10-11">18. nov 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-11-14">
+         <article class="note" data-full="" data-date="14.11.2025">
                <div class="preview">Projektor in Snuggie</div>
                 <time datetime="2025-10-11">14. nov 2025</time>
          </article>
 
-         <article class="note" data-full="Delal plakat, kiflice pri njej, kupili pištolj Boki, badminton, cajcek in umirjen pogovor z mami" data-date="2025-10-25">
+         <article class="note" data-full="Delal plakat, kiflice pri njej, kupili pištolj Boki, badminton, cajcek in umirjen pogovor z mami" data-date="28.10.2025">
                <div class="preview">Badminton, darilo za Boku, mami </div>
                 <time datetime="2025-10-11">28. okt 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-10-25">
+         <article class="note" data-full="" data-date="25.10.2025">
                <div class="preview">Tek ob Velenjskem jezeru</div>
                 <time datetime="2025-10-11">25. okt 2025</time>
          </article>
 
-         <article class="note" data-full="pelerine, avto, najdu nekako učilnico 3d, mercator, poklicala Predraga, bijela čorba, čakal ocene tistega svetnika ki je fizik, dol so se neki otroci lovili." data-date="2025-10-11">
+         <article class="note" data-full="pelerine, avto, najdu nekako učilnico 3d, mercator, poklicala Predraga, bijela čorba, čakal ocene tistega svetnika ki je fizik, dol so se neki otroci lovili." data-date="23.10.2025">
                <div class="preview">Učna ura na Škofijski gimnaziji</div>
                 <time datetime="2025-10-11">23. okt 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-10-12">
+         <article class="note" data-full="" data-date="12.10.2025">
                <div class="preview">Mokrice in Kostanjevica ob Krki</div>
                 <time datetime="2025-10-11">12. okt 2025</time>
          </article>
 
-         <article class="note" data-full="" data-date="2025-10-12">
+         <article class="note" data-full="" data-date="12.10.2025">
                <div class="preview">Zagreb maraton [Nedelja]</div>
                 <time datetime="2025-10-11">12. okt 2025</time>
          </article>
 
-         <article class="note" data-full="Pripeljal sem se do Vojkove okoli petih, pol šestih. Ana in Mia sta zamujale, saj sta šla v park spuščati zmaja. Dobil sem Mango zeleni čaj bubble tea z jagodnimi bobami. Ana je pakirala (kosmiče, jogurt in arašidovo maslo). Štartala sva okoli šestih, Mio sva odpeljala do avtobusne postaje pri BTCju in se vklopila na avtocesto." data-date="2025-10-11">
+         <article class="note" data-full="Pripeljal sem se do Vojkove okoli petih, pol šestih. Ana in Mia sta zamujale (jaz sem zamujal), zato sta šla v park spuščati zmaja. Dobil sem Mango zeleni čaj bubble tea z jagodnimi bobami. Ana je pakirala (kosmiče, jogurt in arašidovo maslo). Štartala sva okoli šestih, Mio sva odpeljala do avtobusne postaje pri BTCju in se vklopila na avtocesto." data-date="11.10.2025">
                <div class="preview">Zagreb maraton [Sobota]</div>
                 <time datetime="2025-10-11">11. okt 2025</time>
          </article>
 
-         <article class="note" data-full="Parkiral sem avto pred Vojkovo okoli sedmih. Usedla sva se in opeljala do EF parkirišča. Dala sva denarnice v žepke, in odšla proti stožicam. Renata sva srečala pri vhodu A3, čeprav ga nisva mogla najti. Vhod nas je peljal po stopnicah. Prvo smo sedeli, od 20:00 do 20:30, dokler ni koncert začel. Potem smo vstali in se približali do ograje, kjer smo stoje spremljali." data-date="2025-10-10">
+         <article class="note" data-full="Parkiral sem avto pred Vojkovo okoli sedmih. Usedla sva se in opeljala do EF parkirišča. Dala sva denarnice v žepke, in odšla proti stožicam. Renata sva srečala pri vhodu A3, čeprav ga nisva mogla najti. Vhod nas je peljal po stopnicah. Prvo smo sedeli, od 20:00 do 20:30, dokler ni koncert začel. Potem smo vstali in se približali do ograje, kjer smo stoje spremljali." data-date="10.10.2025">
                <div class="preview">Prljavo kazalište koncert.</div>
              <time datetime="2025-10-10">10. okt 2025</time>
          </article>
 
-         <article class="note" data-full= "Vstala sva skupaj okoli 8:30. Oblekla sva se, prijela za rokice in odšla proti galeriji. Poslovila sva se pri vratih, Ana je morala po ključ, jaz sem pa reku, da nama grem iskat za jest. Med potjo sem se ustavil v Mladinski Knjigi, kjer sem iskal knjigo. Poslali so me v Knjigarno Sanje, proti zmajskemu mostu. Tam so imeli knjigo v starem, ikoničnem, retro izvodu. Kupil sem jo, spravil jo v papirnato vrečko, odšel v Arta da jo dekoriram. V Artu sem kupil gasilske nalepke in še ene nalepke živalic, ki so, kakor se izkaže, bile tetovaže. Vsedu sem se na sončka pri Petkovškovem nabrežju ob ugodni kavici, kjer sem zalepil nalepke na knjigo. V Hooda sem stopil okoli desetih, naročil nama kosilo. Odnesu sem vse v galerijo, skregala sva se. Amapak ni trajalo dolgo, vrnil sem se, Ana me je objela, ker sem jo presenetil. Peljala me je v klet, da ugotoviva, kako prižgati en zelo star televizor, ki je del razstave. Vrnila sva se gor, tetovirala sva si roke. Ona krokodilčka, jaz pa žabico. Klicala je Bogdana, da mu pokaže. Klicala je Katarino, znorela je." data-date="2025-09-15">
+         <article class="note" data-full= "Vstala sva skupaj okoli 8:30. Oblekla sva se, prijela za rokice in odšla proti galeriji. Poslovila sva se pri vratih, Ana je morala po ključ, jaz sem pa reku, da nama grem iskat za jest. Med potjo sem se ustavil v Mladinski Knjigi, kjer sem iskal knjigo. Poslali so me v Knjigarno Sanje, proti zmajskemu mostu. Tam so imeli knjigo v starem, ikoničnem, retro izvodu. Kupil sem jo, spravil jo v papirnato vrečko, odšel v Arta da jo dekoriram. V Artu sem kupil gasilske nalepke in še ene nalepke živalic, ki so, kakor se izkaže, bile tetovaže. Vsedu sem se na sončka pri Petkovškovem nabrežju ob ugodni kavici, kjer sem zalepil nalepke na knjigo. V Hooda sem stopil okoli desetih, naročil nama kosilo. Odnesu sem vse v galerijo, skregala sva se. Amapak ni trajalo dolgo, vrnil sem se, Ana me je objela, ker sem jo presenetil. Peljala me je v klet, da ugotoviva, kako prižgati en zelo star televizor, ki je del razstave. Vrnila sva se gor, tetovirala sva si roke. Ona krokodilčka, jaz pa žabico. Klicala je Bogdana, da mu pokaže. Klicala je Katarino, znorela je." data-date="4.10.2025">
               <div class="preview">ZDSLU Galerija.</div>
              <time datetime="2025-10-04">4. okt 2025</time>
          </article>
 
-         <article class="note" data-full= "" data-date="2025-09-28">
+         <article class="note" data-full= "" data-date="28.9.2025">
               <div class="preview">Kolesarjenje ob Savi.</div>
              <time datetime="2025-10-04">28. sept 2025</time>
          </article>
 
-         <article class="note" data-full= "" data-date="2025-09-21">
+         <article class="note" data-full= "" data-date="21.9.2025">
               <div class="preview">Bicikelj, sladoled, grozdje.</div>
              <time datetime="2025-10-04">21. sept 2025</time>
          </article>
 
-         <article class="note" data-full= "" data-date="2025-09-16">
+         <article class="note" data-full= "" data-date="16.9.2025">
               <div class="preview">Filofaks, gibanica, galerija.</div>
              <time datetime="2025-10-04">16. sept 2025</time>
          </article>
