@@ -9,6 +9,7 @@
         font-family: Helvetica;
         --note_bg: #f5f2eb;
         --note_shadow: rgba(0, 0, 0, 0.2);
+        background-color: rgb(210, 220, 200);
     }
     .Header {
         display: flex;
@@ -17,6 +18,7 @@
         padding: 0;
         width: 100vw;
         background-color: rgb(210, 220, 200);
+
     }
     .Header h1 {
         flex: 2;
@@ -30,12 +32,12 @@
     }
     .Logo {
         height: 105px;
-        padding: 1vh 1vw;
+        padding: 2vh 2vw;
         cursor: pointer;
     }
     .Menu {
-        height: 42px;
-        padding: 1vh 1vw;
+        height: 4rem;
+        padding: 1.5vh 1.5vw;
         cursor: pointer;
     }
     .Left {
@@ -51,20 +53,21 @@
     }
     #Naslov {
         text-align: center;
-        color: rgb(103, 102, 69);
+        color: rgb(109, 109, 85);
         font-family: bahnschrift;
-        font-size: 33px;
+        font-size: 2.5rem;
     }
     .Dropdown {
         display: none;
         position: absolute;
-        top: 80px;
-        right: 20px;
+        top: 5vh;
+        right: 3vw;
         background-color: rgb(210, 220, 200);
-        border: 1px solid rgb(129, 135, 102);
-        border-radius: 5px;
+        border: 1px solid rgb(116, 120, 94);
+        border-radius: 6px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
+        padding: 1rem;
       }
     .note {
         background: var(--note_bg);
@@ -113,13 +116,13 @@
         opacity: 0.9;
     }
     .Dropdown li { 
-          margin: 1vh;
+          margin: 5vh;
       }
     .Dropdown a { 
             Text-decoration: none;
             color: rgb(129, 135, 102);
             font-family: Bahnschrift;
-            font-size: 16px;
+            font-size: 1.5rem;
      }
      body {
         background-color: rgb(246, 242, 219);
@@ -128,6 +131,7 @@
         align-items: center;
         justify-content: flex-start;
         margin: 0px;
+
      }
      .notes-lightbox {  
         position: fixed;
@@ -202,6 +206,53 @@
 
 
     <div class="notes-grid">
+
+         <article class="note" data-full=""  data-date="13.1.2026">
+               <div class="preview">Pri Ani doma, 5. dan</div>
+                <time datetime="2026-01-01">13. jan 2026</time>
+            </article>
+
+         <article class="note" data-full="Vstala sva okoli desetih in spila kavico. Ani sem nalakiral nohte, imela sva zajtrk. Potem sva splanirala dan, se usedla na kavč in pisala stvari za faks
+         
+         Okoli dveh sva se sprehodila so službe, bil je lep sončen dan. Spotikala sva se na makedamu, na glavni cesti sva se pa izmikala avtom, pasalo nama je. Na šihtu sva spila dva čajčka in spoznala Ivano, ki dela za mizo zraven Katarinine. Bil je čajček njene mame. Tudi sem spoznal moža od Snežane. V pisarni smo se pogovarjali z Mihajlom. Lepo smo se pozdravili in Predrag nas je odpeljal do mesta.
+         
+         Doma smo pojedli kosilo in hitro sva se pripravila za izlet v Kruševac. Katarina je peljala, jaz sem sedel spredaj. Z Ano sva se sprehodila do centra, nato v Grizzly-ja, kjer sva za šankom spila dve medenjači in kupila uhane, ki jih je naredila zaposlena v baru. Šla sva tudi v Kruško, spila kavico in šla proti shopping centru. Tam smo se srečali in odšli domov.
+         
+         Doma so gledali vaterpolo, Srbija je igrala proti Španiji. Predragu je bila všeč pištolica, ki smo kupili Bogdanu, streljal jo je v sliko. 
+         
+         Z Ano sva malo delala za faks v sobi, potem sva se vrnila v sobo. Glih sva zamudila tekmo, Srbija je zmagala! Stuširala sva Bogdana, jedla sva, Ana juhico jaz pa paprike stoje direkt iz tavice. Proti koncu dneva smo brali Katarinina in Predragova pisma, preden sva odšla spat."  data-date="12.1.2026">
+               <div class="preview">Pri Ani doma, 4. dan</div>
+                <time datetime="2026-01-01">12. jan 2026</time>
+            </article>
+
+         <article class="note" data-full="Ana je vstala pred mano, ker je spila kavico z mami. Jaz sem ustal kasneje, podružili smo se jaz, Ana, Katarina, Dunja in Bogdan. Ana in Bogdan sta plesala majmunski ples.
+         
+         Prišla je Anina teta, Snežana. Spoznala sva se, Predrag je ustal, lepo smo se pohecali v dnevni sobi. Šli smo nato ven se metat po snegu, igrat pod drevesi in porivat Ano na tla.
+         
+         V dnevni sobi smo nato zajtrkovali -Žu-Žu- in potem smo večino časa preživeli skupaj v dnevni sobi. Igrali smo slagalico 2v2, Snežana je odšla domov in smo čakali na kosilo, punjene paprike. Bile so res dobre, Katarina se je potrudila, da vključi junječe meso v njihovo dieto.
+         
+         Po kosilu sva z Ano na kratko v sobi pisala njen Powerpoint za nastop v sredo. Bogan naju je zmotil, ne pozabi tega. Igral si fifo na postelji. Cozy ambient sva naredila!"  data-date="11.1.2026">
+               <div class="preview">Pri Ani doma, 3. dan</div>
+                <time datetime="2026-01-01">11. jan 2026</time>
+            </article>
+
+         <article class="note" data-full="Midva sva ustala in skupaj z Dunjo spila kavico in zajtrkovala. Ana, Dunja in Bogdan so mi delali družbo zunaj, ko smo delali snežaka. Začelo je deževati, po nekem času sva šla počivat.
+         
+         Zbudila sva se, zunaj je ogromno snežilo. Z Ano sva brskala njene stare spominčke iz osnovne šole. Tisti leksikon, kjer je vsak sošolec in sošolka odgovarjala na določeno vprašanje. Ugotovili smo tudi za njeno simpatijo iz osnovne šole! Malo nas sneg zaskrbel, ker smo splanirali daljšo vožno, ampak smo se vseeno odločili iti v Niš. Mihajlo je peljal mene in Ano zadaj in Katarino spredaj. Avtocesta je bila zasnežena, ampak smo počasi prispeli do kafane Mrak. Mihajlotov avto se je malo popraskal pri parkiranju. Tam smo pojedli, Ana je častila <3 in odpeljali smo se domov. Med potjo smo se ustavili v Dechatlonu, ker sva iskala zimske hlače.
+         
+         Dan sva zaključila z Ano v njeni sobi, pisala sva stvari za faks." data-date="10.1.2026">
+               <div class="preview">Pri Ani doma, 2. dan</div>
+                <time datetime="2026-01-01">10. jan 2026</time>
+            </article>
+
+         <article class="note" data-full="Prišel sem v Niš okoli 6:30, Ana in Predrag sta me pobrala par minut kasneje. Med potjo do Šiljegovca smo se spoznali, pogovarjali in pokazali vsa naselja do hiše. Med drugimi tudi Đunis, odkod je Katarinin dedek, kar sta ona dva ugotovila v Beogradu. Prišli smo domov, Katarina je bila budna že od štirih, ker nam je pekla gibanico. Pogovarjali smo se, spili kavico, nato sem spoznal še Miloša in Dunjo. Pripravili so nam vsem zajtrk, jedli smo, prišel je Bogdan, odprl svoje darilo od slovenskega dedka mraza. Z Ano sva odšla spat za par ur, zunaj sva zaprla želozije in sva za par uric zaspala. 
+         
+         Ustala sva, Bogdan in Mihajlo sta se sankala na dvorišču, metala kepce v okno, Ana je jedla kosilo. Peljala me je v klet po kislo zelenjavo in potem še v podstrešje. Ana, Dunja, Mihajlo, Bogdan in jaz smo se družili, streljali s pištolo, slikali po hiši itd. Popoldan smo se sankali, privezali smo sanke in nas je Predrag poganjal vse z avtom.
+         
+         Zvečer so šli vsi na slavo k sosedom, zato sva tudi z Ano imela malo privatnega časa skupaj. Bogdana sva uspavala, malo sva mu delala družbo v sobi. Dan sva zaključila v postelji okoli enajstih." data-date="9.1.2026">
+               <div class="preview">Pri Ani doma, 1. dan</div>
+                <time datetime="2026-01-01">9. jan 2026</time>
+            </article>
 
                 <!--each .Note stores the full note text in data-full. The .preview shows the short text in the grid; time shows the date. -->
 
